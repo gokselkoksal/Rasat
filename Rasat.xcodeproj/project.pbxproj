@@ -1,0 +1,1003 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		621F08F321DFD1B0009D8CA8 /* Rasat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 621F08E921DFD1B0009D8CA8 /* Rasat.framework */; };
+		621F08F821DFD1B0009D8CA8 /* RasatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621F08F721DFD1B0009D8CA8 /* RasatTests.swift */; };
+		621F08FA21DFD1B0009D8CA8 /* Rasat.h in Headers */ = {isa = PBXBuildFile; fileRef = 621F08EC21DFD1B0009D8CA8 /* Rasat.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		621F091321DFE287009D8CA8 /* Rasat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 621F090A21DFE286009D8CA8 /* Rasat.framework */; };
+		621F094921DFE31F009D8CA8 /* Rasat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 621F094021DFE31F009D8CA8 /* Rasat.framework */; };
+		621F095821DFE449009D8CA8 /* RasatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621F08F721DFD1B0009D8CA8 /* RasatTests.swift */; };
+		621F095921DFE44A009D8CA8 /* RasatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621F08F721DFD1B0009D8CA8 /* RasatTests.swift */; };
+		621F095A21DFE529009D8CA8 /* Rasat.h in Headers */ = {isa = PBXBuildFile; fileRef = 621F08EC21DFD1B0009D8CA8 /* Rasat.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		621F095B21DFE52A009D8CA8 /* Rasat.h in Headers */ = {isa = PBXBuildFile; fileRef = 621F08EC21DFD1B0009D8CA8 /* Rasat.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		621F095C21DFE52B009D8CA8 /* Rasat.h in Headers */ = {isa = PBXBuildFile; fileRef = 621F08EC21DFD1B0009D8CA8 /* Rasat.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		621F08F421DFD1B0009D8CA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 621F08E021DFD1B0009D8CA8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 621F08E821DFD1B0009D8CA8;
+			remoteInfo = Rasat;
+		};
+		621F091421DFE287009D8CA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 621F08E021DFD1B0009D8CA8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 621F090921DFE286009D8CA8;
+			remoteInfo = Rasat;
+		};
+		621F094A21DFE31F009D8CA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 621F08E021DFD1B0009D8CA8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 621F093F21DFE31F009D8CA8;
+			remoteInfo = "Rasat tvOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		621F08E921DFD1B0009D8CA8 /* Rasat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Rasat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		621F08EC21DFD1B0009D8CA8 /* Rasat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Rasat.h; sourceTree = "<group>"; };
+		621F08ED21DFD1B0009D8CA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		621F08F221DFD1B0009D8CA8 /* Rasat iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Rasat iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		621F08F721DFD1B0009D8CA8 /* RasatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RasatTests.swift; sourceTree = "<group>"; };
+		621F08F921DFD1B0009D8CA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		621F090A21DFE286009D8CA8 /* Rasat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Rasat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		621F091221DFE287009D8CA8 /* Rasat macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Rasat macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		621F093321DFE30D009D8CA8 /* Rasat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Rasat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		621F094021DFE31F009D8CA8 /* Rasat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Rasat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		621F094821DFE31F009D8CA8 /* Rasat tvOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Rasat tvOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		621F08E621DFD1B0009D8CA8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		621F08EF21DFD1B0009D8CA8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				621F08F321DFD1B0009D8CA8 /* Rasat.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		621F090721DFE286009D8CA8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		621F090F21DFE287009D8CA8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				621F091321DFE287009D8CA8 /* Rasat.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		621F093021DFE30D009D8CA8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		621F093D21DFE31F009D8CA8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		621F094521DFE31F009D8CA8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				621F094921DFE31F009D8CA8 /* Rasat.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		621F08DF21DFD1B0009D8CA8 = {
+			isa = PBXGroup;
+			children = (
+				621F08EB21DFD1B0009D8CA8 /* Rasat */,
+				621F08F621DFD1B0009D8CA8 /* RasatTests */,
+				621F08EA21DFD1B0009D8CA8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		621F08EA21DFD1B0009D8CA8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				621F08E921DFD1B0009D8CA8 /* Rasat.framework */,
+				621F08F221DFD1B0009D8CA8 /* Rasat iOS Tests.xctest */,
+				621F090A21DFE286009D8CA8 /* Rasat.framework */,
+				621F091221DFE287009D8CA8 /* Rasat macOS Tests.xctest */,
+				621F093321DFE30D009D8CA8 /* Rasat.framework */,
+				621F094021DFE31F009D8CA8 /* Rasat.framework */,
+				621F094821DFE31F009D8CA8 /* Rasat tvOS Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		621F08EB21DFD1B0009D8CA8 /* Rasat */ = {
+			isa = PBXGroup;
+			children = (
+				621F095D21DFE92A009D8CA8 /* Supporting Files */,
+			);
+			path = Rasat;
+			sourceTree = "<group>";
+		};
+		621F08F621DFD1B0009D8CA8 /* RasatTests */ = {
+			isa = PBXGroup;
+			children = (
+				621F095E21DFE93F009D8CA8 /* Supporting Files */,
+				621F08F721DFD1B0009D8CA8 /* RasatTests.swift */,
+			);
+			path = RasatTests;
+			sourceTree = "<group>";
+		};
+		621F095D21DFE92A009D8CA8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				621F08EC21DFD1B0009D8CA8 /* Rasat.h */,
+				621F08ED21DFD1B0009D8CA8 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		621F095E21DFE93F009D8CA8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				621F08F921DFD1B0009D8CA8 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		621F08E421DFD1B0009D8CA8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				621F08FA21DFD1B0009D8CA8 /* Rasat.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		621F090521DFE286009D8CA8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				621F095A21DFE529009D8CA8 /* Rasat.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		621F092E21DFE30D009D8CA8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				621F095C21DFE52B009D8CA8 /* Rasat.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		621F093B21DFE31F009D8CA8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				621F095B21DFE52A009D8CA8 /* Rasat.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		621F08E821DFD1B0009D8CA8 /* Rasat iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 621F08FD21DFD1B0009D8CA8 /* Build configuration list for PBXNativeTarget "Rasat iOS" */;
+			buildPhases = (
+				621F08E421DFD1B0009D8CA8 /* Headers */,
+				621F08E521DFD1B0009D8CA8 /* Sources */,
+				621F08E621DFD1B0009D8CA8 /* Frameworks */,
+				621F08E721DFD1B0009D8CA8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Rasat iOS";
+			productName = Rasat;
+			productReference = 621F08E921DFD1B0009D8CA8 /* Rasat.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		621F08F121DFD1B0009D8CA8 /* Rasat iOS Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 621F090021DFD1B0009D8CA8 /* Build configuration list for PBXNativeTarget "Rasat iOS Tests" */;
+			buildPhases = (
+				621F08EE21DFD1B0009D8CA8 /* Sources */,
+				621F08EF21DFD1B0009D8CA8 /* Frameworks */,
+				621F08F021DFD1B0009D8CA8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				621F08F521DFD1B0009D8CA8 /* PBXTargetDependency */,
+			);
+			name = "Rasat iOS Tests";
+			productName = RasatTests;
+			productReference = 621F08F221DFD1B0009D8CA8 /* Rasat iOS Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		621F090921DFE286009D8CA8 /* Rasat macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 621F091B21DFE287009D8CA8 /* Build configuration list for PBXNativeTarget "Rasat macOS" */;
+			buildPhases = (
+				621F090521DFE286009D8CA8 /* Headers */,
+				621F090621DFE286009D8CA8 /* Sources */,
+				621F090721DFE286009D8CA8 /* Frameworks */,
+				621F090821DFE286009D8CA8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Rasat macOS";
+			productName = Rasat;
+			productReference = 621F090A21DFE286009D8CA8 /* Rasat.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		621F091121DFE287009D8CA8 /* Rasat macOS Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 621F091E21DFE287009D8CA8 /* Build configuration list for PBXNativeTarget "Rasat macOS Tests" */;
+			buildPhases = (
+				621F090E21DFE287009D8CA8 /* Sources */,
+				621F090F21DFE287009D8CA8 /* Frameworks */,
+				621F091021DFE287009D8CA8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				621F091521DFE287009D8CA8 /* PBXTargetDependency */,
+			);
+			name = "Rasat macOS Tests";
+			productName = RasatTests;
+			productReference = 621F091221DFE287009D8CA8 /* Rasat macOS Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		621F093221DFE30D009D8CA8 /* Rasat watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 621F093821DFE30D009D8CA8 /* Build configuration list for PBXNativeTarget "Rasat watchOS" */;
+			buildPhases = (
+				621F092E21DFE30D009D8CA8 /* Headers */,
+				621F092F21DFE30D009D8CA8 /* Sources */,
+				621F093021DFE30D009D8CA8 /* Frameworks */,
+				621F093121DFE30D009D8CA8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Rasat watchOS";
+			productName = "Rasat watchOS";
+			productReference = 621F093321DFE30D009D8CA8 /* Rasat.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		621F093F21DFE31F009D8CA8 /* Rasat tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 621F095121DFE320009D8CA8 /* Build configuration list for PBXNativeTarget "Rasat tvOS" */;
+			buildPhases = (
+				621F093B21DFE31F009D8CA8 /* Headers */,
+				621F093C21DFE31F009D8CA8 /* Sources */,
+				621F093D21DFE31F009D8CA8 /* Frameworks */,
+				621F093E21DFE31F009D8CA8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Rasat tvOS";
+			productName = "Rasat tvOS";
+			productReference = 621F094021DFE31F009D8CA8 /* Rasat.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		621F094721DFE31F009D8CA8 /* Rasat tvOS Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 621F095421DFE320009D8CA8 /* Build configuration list for PBXNativeTarget "Rasat tvOS Tests" */;
+			buildPhases = (
+				621F094421DFE31F009D8CA8 /* Sources */,
+				621F094521DFE31F009D8CA8 /* Frameworks */,
+				621F094621DFE31F009D8CA8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				621F094B21DFE31F009D8CA8 /* PBXTargetDependency */,
+			);
+			name = "Rasat tvOS Tests";
+			productName = "Rasat tvOSTests";
+			productReference = 621F094821DFE31F009D8CA8 /* Rasat tvOS Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		621F08E021DFD1B0009D8CA8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = GK;
+				TargetAttributes = {
+					621F08E821DFD1B0009D8CA8 = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
+					};
+					621F08F121DFD1B0009D8CA8 = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
+					};
+					621F090921DFE286009D8CA8 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					621F091121DFE287009D8CA8 = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
+					};
+					621F093221DFE30D009D8CA8 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					621F093F21DFE31F009D8CA8 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					621F094721DFE31F009D8CA8 = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
+					};
+				};
+			};
+			buildConfigurationList = 621F08E321DFD1B0009D8CA8 /* Build configuration list for PBXProject "Rasat" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 621F08DF21DFD1B0009D8CA8;
+			productRefGroup = 621F08EA21DFD1B0009D8CA8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				621F08E821DFD1B0009D8CA8 /* Rasat iOS */,
+				621F08F121DFD1B0009D8CA8 /* Rasat iOS Tests */,
+				621F090921DFE286009D8CA8 /* Rasat macOS */,
+				621F091121DFE287009D8CA8 /* Rasat macOS Tests */,
+				621F093F21DFE31F009D8CA8 /* Rasat tvOS */,
+				621F094721DFE31F009D8CA8 /* Rasat tvOS Tests */,
+				621F093221DFE30D009D8CA8 /* Rasat watchOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		621F08E721DFD1B0009D8CA8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		621F08F021DFD1B0009D8CA8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		621F090821DFE286009D8CA8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		621F091021DFE287009D8CA8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		621F093121DFE30D009D8CA8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		621F093E21DFE31F009D8CA8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		621F094621DFE31F009D8CA8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		621F08E521DFD1B0009D8CA8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		621F08EE21DFD1B0009D8CA8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				621F08F821DFD1B0009D8CA8 /* RasatTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		621F090621DFE286009D8CA8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		621F090E21DFE287009D8CA8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				621F095821DFE449009D8CA8 /* RasatTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		621F092F21DFE30D009D8CA8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		621F093C21DFE31F009D8CA8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		621F094421DFE31F009D8CA8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				621F095921DFE44A009D8CA8 /* RasatTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		621F08F521DFD1B0009D8CA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 621F08E821DFD1B0009D8CA8 /* Rasat iOS */;
+			targetProxy = 621F08F421DFD1B0009D8CA8 /* PBXContainerItemProxy */;
+		};
+		621F091521DFE287009D8CA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 621F090921DFE286009D8CA8 /* Rasat macOS */;
+			targetProxy = 621F091421DFE287009D8CA8 /* PBXContainerItemProxy */;
+		};
+		621F094B21DFE31F009D8CA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 621F093F21DFE31F009D8CA8 /* Rasat tvOS */;
+			targetProxy = 621F094A21DFE31F009D8CA8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		621F08FB21DFD1B0009D8CA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = me.gk.Rasat;
+				PRODUCT_NAME = Rasat;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		621F08FC21DFD1B0009D8CA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = me.gk.Rasat;
+				PRODUCT_NAME = Rasat;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		621F08FE21DFD1B0009D8CA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Rasat/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		621F08FF21DFD1B0009D8CA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Rasat/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		621F090121DFD1B0009D8CA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = RasatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.gk.RasatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		621F090221DFD1B0009D8CA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = RasatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.gk.RasatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		621F091C21DFE287009D8CA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = Rasat/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		621F091D21DFE287009D8CA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = Rasat/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		621F091F21DFE287009D8CA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = RasatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.gk.RasatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		621F092021DFE287009D8CA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = RasatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.gk.RasatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		621F093921DFE30D009D8CA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Rasat/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+			};
+			name = Debug;
+		};
+		621F093A21DFE30D009D8CA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Rasat/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+			};
+			name = Release;
+		};
+		621F095221DFE320009D8CA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Rasat/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Debug;
+		};
+		621F095321DFE320009D8CA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Rasat/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Release;
+		};
+		621F095521DFE320009D8CA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = RasatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.gk.RasatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Debug;
+		};
+		621F095621DFE320009D8CA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = RasatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.gk.RasatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		621F08E321DFD1B0009D8CA8 /* Build configuration list for PBXProject "Rasat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				621F08FB21DFD1B0009D8CA8 /* Debug */,
+				621F08FC21DFD1B0009D8CA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		621F08FD21DFD1B0009D8CA8 /* Build configuration list for PBXNativeTarget "Rasat iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				621F08FE21DFD1B0009D8CA8 /* Debug */,
+				621F08FF21DFD1B0009D8CA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		621F090021DFD1B0009D8CA8 /* Build configuration list for PBXNativeTarget "Rasat iOS Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				621F090121DFD1B0009D8CA8 /* Debug */,
+				621F090221DFD1B0009D8CA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		621F091B21DFE287009D8CA8 /* Build configuration list for PBXNativeTarget "Rasat macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				621F091C21DFE287009D8CA8 /* Debug */,
+				621F091D21DFE287009D8CA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		621F091E21DFE287009D8CA8 /* Build configuration list for PBXNativeTarget "Rasat macOS Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				621F091F21DFE287009D8CA8 /* Debug */,
+				621F092021DFE287009D8CA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		621F093821DFE30D009D8CA8 /* Build configuration list for PBXNativeTarget "Rasat watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				621F093921DFE30D009D8CA8 /* Debug */,
+				621F093A21DFE30D009D8CA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		621F095121DFE320009D8CA8 /* Build configuration list for PBXNativeTarget "Rasat tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				621F095221DFE320009D8CA8 /* Debug */,
+				621F095321DFE320009D8CA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		621F095421DFE320009D8CA8 /* Build configuration list for PBXNativeTarget "Rasat tvOS Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				621F095521DFE320009D8CA8 /* Debug */,
+				621F095621DFE320009D8CA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 621F08E021DFD1B0009D8CA8 /* Project object */;
+}
