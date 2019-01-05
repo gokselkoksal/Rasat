@@ -1,0 +1,45 @@
+language: objective-c
+osx_image: xcode10.1
+branches:
+  only:
+    - master
+env:
+  global:
+    - LC_CTYPE=en_US.UTF-8
+    - LANG=en_US.UTF-8
+    - PROJECT="Rasat.xcodeproj"
+    - IOS_FRAMEWORK_SCHEME="Rasat iOS"
+    - MACOS_FRAMEWORK_SCHEME="Rasat macOS"
+    - TVOS_FRAMEWORK_SCHEME="Rasat tvOS"
+    - WATCHOS_FRAMEWORK_SCHEME="Rasat watchOS"
+  matrix:
+    - DESTINATION="OS=4.2,name=Apple Watch - 42mm" SCHEME="$WATCHOS_FRAMEWORK_SCHEME"  RUN_TESTS="NO"
+    - DESTINATION="OS=3.2,name=Apple Watch - 42mm" SCHEME="$WATCHOS_FRAMEWORK_SCHEME"  RUN_TESTS="NO"
+
+    - DESTINATION="OS=11.2,name=iPhone X"          SCHEME="$IOS_FRAMEWORK_SCHEME"      RUN_TESTS="YES"
+    - DESTINATION="OS=10.3.1,name=iPhone 7 Plus"   SCHEME="$IOS_FRAMEWORK_SCHEME"      RUN_TESTS="YES"
+    - DESTINATION="OS=9.3,name=iPhone 6"           SCHEME="$IOS_FRAMEWORK_SCHEME"      RUN_TESTS="YES"
+
+    - DESTINATION="OS=11.2,name=Apple TV 4K"       SCHEME="$TVOS_FRAMEWORK_SCHEME"     RUN_TESTS="YES"
+    - DESTINATION="OS=10.2,name=Apple TV 1080p"    SCHEME="$TVOS_FRAMEWORK_SCHEME"     RUN_TESTS="YES"
+
+    - DESTINATION="arch=x86_64"                    SCHEME="$MACOS_FRAMEWORK_SCHEME"    RUN_TESTS="YES"
+
+script:
+  - set -o pipefail
+  - xcodebuild -version
+  - xcodebuild -showsdks
+
+  # Build Framework in Debug and Run Tests if specified
+  - if [ $RUN_TESTS == "YES" ]; then
+      xcodebuild -project "$PROJECT" -scheme "$SCHEME" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO ENABLE_TESTABILITY=YES test | xcpretty;
+    else
+      xcodebuild -project "$PROJECT" -scheme "$SCHEME" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO build | xcpretty;
+    fi
+
+  # Build Framework in Release and Run Tests if specified
+  - if [ $RUN_TESTS == "YES" ]; then
+      xcodebuild -project "$PROJECT" -scheme "$SCHEME" -destination "$DESTINATION" -configuration Release ONLY_ACTIVE_ARCH=NO ENABLE_TESTABILITY=YES test | xcpretty;
+    else
+      xcodebuild -project "$PROJECT" -scheme "$SCHEME" -destination "$DESTINATION" -configuration Release ONLY_ACTIVE_ARCH=NO build | xcpretty;
+    fi
