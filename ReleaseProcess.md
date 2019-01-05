@@ -13,5 +13,6 @@
 
 * Open `Rasat.podspec`.
 * Update `s.version` field with the current version.
+* Check other fields just in case there are any updates.
 * Run: `pod spec lint Rasat.podspec`
 * Run: `pod trunk push Rasat.podspec`
