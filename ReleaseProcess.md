@@ -11,7 +11,7 @@
 
 ## Prepare Cocoapods Release
 
-* Open Lightning.podspec.
+* Open `Rasat.podspec`.
 * Update `s.version` field with the current version.
-* Run: `pod spec lint Lightning.podspec`
-* Run: `pod trunk push Lightning.podspec`
+* Run: `pod spec lint Rasat.podspec`
+* Run: `pod trunk push Rasat.podspec`
