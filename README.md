@@ -1,4 +1,4 @@
-# Rasat
+# Rasat :tokyo_tower:
 
 [![Carthage](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![CocoaPods](https://img.shields.io/cocoapods/v/Rasat.svg?style=flat)](http://cocoapods.org/pods/Rasat)
@@ -11,7 +11,7 @@ Broadcast messages using channels.
 
 ## Components
 
-### Channel
+### Channel :radio:
 
 Channel is simply an event bus that you can broadcast messages on.
 
@@ -28,7 +28,7 @@ let userChannel = Channel<UserEvent>()
 userChannel.broadcast(.loggedIn(id: "gokselkk"))
 ```
 
-### Observable
+### Observable :eye:
 
 Observables let you listen to messages on a channel.
 
@@ -42,7 +42,7 @@ let subscription = userChannel.observable.subscribe { event in
 subscription.dispose()
 ```
 
-### Subject
+### Subject :package:
 
 Subjects encapsulate a value and broadcast when changed.
 
@@ -63,14 +63,18 @@ themeSubject.observable.subscribe { theme in
 themeSubject.value = .dark
 ```
 
-## Example
+## Example :japanese_castle:
 
 Listening for theme changes in a view controller:
 
 ```swift
 class ThemeManager {
 
-  let channel = Channel<Theme>()
+  var observable: Observable<Theme> {
+    return channel.observable
+  }
+  
+  private let channel = Channel<Theme>()
   
   func updateTheme(_ theme: Theme) {
     channel.broadcast(theme)
@@ -85,7 +89,7 @@ class FeedViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    disposeBag += themeManager.channel.observable.subscribe { theme in
+    disposeBag += themeManager.observable.subscribe { theme in
       self.updateTheme(theme)
     }
 }
