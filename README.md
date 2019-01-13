@@ -95,3 +95,28 @@ class FeedViewController: UIViewController {
 }
 ```
 **Note**: `DisposeBag` is a collection of subscriptions (or disposables) that needs to live during the lifecycle of this view controller. In this example, subscriptions get disposed along with the dispose bag when this view controller gets deallocated.
+
+## Installation
+
+### Using [CocoaPods](https://github.com/CocoaPods/CocoaPods)
+
+Add the following line to your `Podfile`:
+```
+pod 'Rasat'
+```
+
+### Using [Carthage](https://github.com/Carthage/Carthage)
+
+Add the following line to your `Cartfile`:
+```
+github "gokselkoksal/Rasat"
+```
+
+### Manually
+
+Drag and drop `Sources` folder to your project. 
+
+*It's highly recommended to use a dependency manager like `CocoaPods` or `Carthage`.*
+
+## License
+Rasat is available under the [MIT license](https://github.com/gokselkoksal/Rasat/blob/master/LICENSE).
