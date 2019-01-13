@@ -98,7 +98,7 @@
 		6227437421E12BDE00699851 /* Rasat.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Rasat.podspec; sourceTree = SOURCE_ROOT; };
 		6227437521E12BDE00699851 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = SOURCE_ROOT; };
 		6227437721E12D8A00699851 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
-		6227437821E12DB100699851 /* ReleaseProcess.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = ReleaseProcess.md; path = Rasat/Docs/ReleaseProcess.md; sourceTree = SOURCE_ROOT; };
+		6227437821E12DB100699851 /* ReleaseProcess.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = ReleaseProcess.md; path = Docs/ReleaseProcess.md; sourceTree = SOURCE_ROOT; };
 		62486CA521DFF9CB002C26F6 /* Array+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Helpers.swift"; sourceTree = "<group>"; };
 		62486CA621DFF9CB002C26F6 /* Optional+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Optional+Helpers.swift"; sourceTree = "<group>"; };
 		62486CB021DFFD5A002C26F6 /* Dependencies.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Dependencies.md; sourceTree = "<group>"; };
@@ -163,6 +163,7 @@
 		621F08DF21DFD1B0009D8CA8 = {
 			isa = PBXGroup;
 			children = (
+				6227437621E12D1800699851 /* Metadata */,
 				621F08EB21DFD1B0009D8CA8 /* Rasat */,
 				621F08F621DFD1B0009D8CA8 /* RasatTests */,
 				621F08EA21DFD1B0009D8CA8 /* Products */,
@@ -186,7 +187,6 @@
 		621F08EB21DFD1B0009D8CA8 /* Rasat */ = {
 			isa = PBXGroup;
 			children = (
-				6227437621E12D1800699851 /* Metadata */,
 				621F095D21DFE92A009D8CA8 /* Supporting Files */,
 				621F096221DFF653009D8CA8 /* Sources */,
 			);
