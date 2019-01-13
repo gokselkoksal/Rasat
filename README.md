@@ -7,12 +7,14 @@
 [![Language](https://img.shields.io/badge/swift-4.2-orange.svg)](http://swift.org)
 [![License](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://github.com/gokselkoksal/Rasat/blob/master/LICENSE.txt)
 
-Broadcast messages using channels.
+A microlibrary for pub-sub/observer pattern implementation in Swift. :eye:
+
+* [Motivation](https://github.com/gokselkoksal/Rasat#motivation)
+* Related Article: [Using Channels for Data Flow in Swift](https://medium.com/developermind/using-channels-for-data-flow-in-swift-14bbdf27b471)
 
 ## Components
 
 ### Channel :radio:
-
 Channel is simply an event bus that you can broadcast messages on.
 
 ```swift
