@@ -18,10 +18,10 @@
 		621F096A21DFF6AB009D8CA8 /* WeakArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621F096621DFF6AB009D8CA8 /* WeakArray.swift */; };
 		621F096B21DFF6AB009D8CA8 /* WeakArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621F096621DFF6AB009D8CA8 /* WeakArray.swift */; };
 		621F096C21DFF6AB009D8CA8 /* WeakArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621F096621DFF6AB009D8CA8 /* WeakArray.swift */; };
-		621F096D21DFF6AB009D8CA8 /* Protected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621F096721DFF6AB009D8CA8 /* Protected.swift */; };
-		621F096E21DFF6AB009D8CA8 /* Protected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621F096721DFF6AB009D8CA8 /* Protected.swift */; };
-		621F096F21DFF6AB009D8CA8 /* Protected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621F096721DFF6AB009D8CA8 /* Protected.swift */; };
-		621F097021DFF6AB009D8CA8 /* Protected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621F096721DFF6AB009D8CA8 /* Protected.swift */; };
+		621F096D21DFF6AB009D8CA8 /* Atomic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621F096721DFF6AB009D8CA8 /* Atomic.swift */; };
+		621F096E21DFF6AB009D8CA8 /* Atomic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621F096721DFF6AB009D8CA8 /* Atomic.swift */; };
+		621F096F21DFF6AB009D8CA8 /* Atomic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621F096721DFF6AB009D8CA8 /* Atomic.swift */; };
+		621F097021DFF6AB009D8CA8 /* Atomic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621F096721DFF6AB009D8CA8 /* Atomic.swift */; };
 		621F097121DFF6AB009D8CA8 /* Weak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621F096821DFF6AB009D8CA8 /* Weak.swift */; };
 		621F097221DFF6AB009D8CA8 /* Weak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621F096821DFF6AB009D8CA8 /* Weak.swift */; };
 		621F097321DFF6AB009D8CA8 /* Weak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621F096821DFF6AB009D8CA8 /* Weak.swift */; };
@@ -88,7 +88,7 @@
 		621F094021DFE31F009D8CA8 /* Rasat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Rasat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		621F094821DFE31F009D8CA8 /* Rasat tvOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Rasat tvOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		621F096621DFF6AB009D8CA8 /* WeakArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakArray.swift; sourceTree = "<group>"; };
-		621F096721DFF6AB009D8CA8 /* Protected.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protected.swift; sourceTree = "<group>"; };
+		621F096721DFF6AB009D8CA8 /* Atomic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Atomic.swift; sourceTree = "<group>"; };
 		621F096821DFF6AB009D8CA8 /* Weak.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weak.swift; sourceTree = "<group>"; };
 		621F097621DFF71B009D8CA8 /* Channel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		621F097721DFF71B009D8CA8 /* DisposeBag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisposeBag.swift; sourceTree = "<group>"; };
@@ -226,7 +226,7 @@
 				62486CB021DFFD5A002C26F6 /* Dependencies.md */,
 				621F096821DFF6AB009D8CA8 /* Weak.swift */,
 				621F096621DFF6AB009D8CA8 /* WeakArray.swift */,
-				621F096721DFF6AB009D8CA8 /* Protected.swift */,
+				621F096721DFF6AB009D8CA8 /* Atomic.swift */,
 			);
 			path = Dependencies;
 			sourceTree = "<group>";
@@ -560,7 +560,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				621F096D21DFF6AB009D8CA8 /* Protected.swift in Sources */,
+				621F096D21DFF6AB009D8CA8 /* Atomic.swift in Sources */,
 				621F097921DFF71B009D8CA8 /* Channel.swift in Sources */,
 				621F096921DFF6AB009D8CA8 /* WeakArray.swift in Sources */,
 				621F097D21DFF71B009D8CA8 /* DisposeBag.swift in Sources */,
@@ -584,7 +584,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				621F096E21DFF6AB009D8CA8 /* Protected.swift in Sources */,
+				621F096E21DFF6AB009D8CA8 /* Atomic.swift in Sources */,
 				621F097A21DFF71B009D8CA8 /* Channel.swift in Sources */,
 				621F096A21DFF6AB009D8CA8 /* WeakArray.swift in Sources */,
 				621F097E21DFF71B009D8CA8 /* DisposeBag.swift in Sources */,
@@ -608,7 +608,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				621F097021DFF6AB009D8CA8 /* Protected.swift in Sources */,
+				621F097021DFF6AB009D8CA8 /* Atomic.swift in Sources */,
 				621F097C21DFF71B009D8CA8 /* Channel.swift in Sources */,
 				621F096C21DFF6AB009D8CA8 /* WeakArray.swift in Sources */,
 				621F098021DFF71B009D8CA8 /* DisposeBag.swift in Sources */,
@@ -621,7 +621,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				621F096F21DFF6AB009D8CA8 /* Protected.swift in Sources */,
+				621F096F21DFF6AB009D8CA8 /* Atomic.swift in Sources */,
 				621F097B21DFF71B009D8CA8 /* Channel.swift in Sources */,
 				621F096B21DFF6AB009D8CA8 /* WeakArray.swift in Sources */,
 				621F097F21DFF71B009D8CA8 /* DisposeBag.swift in Sources */,
