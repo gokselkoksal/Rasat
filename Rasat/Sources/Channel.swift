@@ -34,7 +34,7 @@ public class Observable<Value> {
   /// Latest observed value.
   public private(set) var latestValue: Value?
   
-  private let protectedWeakSubscriptions: Protected<WeakArray<Subscription>> = Protected(WeakArray<Subscription>())
+  private let atomicWeakSubscriptions: Atomic<WeakArray<Subscription>> = Atomic(WeakArray<Subscription>())
   
   /// Subscribes given object to observable.
   ///
@@ -49,7 +49,7 @@ public class Observable<Value> {
     handler: @escaping (Value) -> Void) -> Disposable
   {
     let subscription = Subscription(id: id, queue: queue, handler: handler)
-    protectedWeakSubscriptions.write { (weakSubscriptions) in
+    atomicWeakSubscriptions.write { (weakSubscriptions) in
       weakSubscriptions.append(subscription)
     }
     return subscription
@@ -75,11 +75,11 @@ public class Observable<Value> {
   
   /// Returns ids of the current subscriptions. Might be useful for debugging.
   public func subscriptions() -> [String] {
-    return protectedWeakSubscriptions.value.strongElements().map({ $0.id })
+    return atomicWeakSubscriptions.value.strongElements().map({ $0.id })
   }
   
   fileprivate func send(_ value: Value) {
-    protectedWeakSubscriptions.write(mode: .sync) { (weakSubscriptions) in
+    atomicWeakSubscriptions.syncWrite { (weakSubscriptions) in
       self.latestValue = value
       weakSubscriptions.compact()
       weakSubscriptions.strongElements().forEach({ $0.send(value) })
