@@ -192,6 +192,39 @@ class ObservableOperatorTests: XCTestCase {
     XCTAssertEqual(channel.observable.latestValue, "banana.jpg")
     XCTAssertEqual(urls.map({ $0.absoluteString }), ["https://example.com/image/car.jpg"])
   }
+  
+  func testDebounce() {
+    let textChannel = Channel<String>()
+    let e = expectation(description: "debounce")
+    let queue = DispatchQueue.main
+    let expected = "banana"
+    let s = textChannel.observable.subscribe { (value) in
+      print(value)
+    }
+    let subscription = textChannel.observable
+      .debounce(1, on: queue)
+      .subscribe { (text) in
+        XCTAssertEqual(text, "banana")
+        e.fulfill()
+      }
+    
+    func typeText(_ string: String, delay: TimeInterval) {
+      queue.asyncAfter(deadline: .now() + delay) {
+        textChannel.broadcast(string)
+      }
+    }
+    
+    var string = ""
+    for (index, character) in expected.enumerated() {
+      string += String(character)
+      typeText(string, delay: TimeInterval(Double(index) * 0.2))
+    }
+    
+    waitForExpectations(timeout: 5) { (error) in
+      XCTAssertNil(error)
+    }
+    subscription.dispose()
+  }
 }
 
 private extension Observable {

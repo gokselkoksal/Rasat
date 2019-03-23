@@ -68,6 +68,16 @@ public extension Observable {
     }
     return observable
   }
+  
+  public func debounce(_ duration: TimeInterval, on queue: DispatchQueue, file: String = #file, line: UInt = #line) -> Observable<Value> {
+    let (observable, broadcaster) = Observable<Value>.create()
+    let id = subscriptionId("debounce", file, line)
+    let debouncer = Debouncer<Value>(broadcaster: broadcaster)
+    broadcaster.disposables += subscribe(id: id) { (value) in
+      debouncer.send(value, on: queue, delay: duration)
+    }
+    return observable
+  }
 }
 
 public extension Observable where Value: Equatable {
@@ -106,6 +116,28 @@ public extension Observable where Value: OptionalProtocol {
 
 private func subscriptionId(_ prefix: String, _ file: String, _ line: UInt) -> String {
   return prefix + "-" + sourceLocation(file, line)
+}
+
+// MARK: Debouncer
+
+public class Debouncer<Value> {
+  
+  private var work: DispatchWorkItem? = nil
+  private let broadcaster: Observable<Value>.Broadcaster
+  
+  public init(broadcaster: Observable<Value>.Broadcaster) {
+    self.broadcaster = broadcaster
+  }
+  
+  public func send(_ value: Value, on queue: DispatchQueue, delay: TimeInterval) {
+    self.work?.cancel()
+    let work = DispatchWorkItem { [weak self] in
+      self?.broadcaster.broadcast(value)
+    }
+    
+    queue.asyncAfter(deadline: DispatchTime.now() + delay, execute: work)
+    self.work = work
+  }
 }
 
 // MARK: OptionalProtocol
