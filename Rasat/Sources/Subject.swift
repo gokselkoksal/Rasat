@@ -8,25 +8,68 @@
 
 import Foundation
 
-public class Subject<Value> {
+/// Subject is a value wrapper which can be observed for changes.
+/// Access to value is read-write.
+public final class Subject<Value>: ReadonlySubject<Value> {
   
+  public override var value: Value {
+    get {
+      return core.value
+    }
+    set {
+      core.value = newValue
+    }
+  }
+  
+  /// Creates a subject with given value.
+  ///
+  /// - Parameter value: Wrapped value.
+  public init(_ value: Value) {
+    super.init(core: SubjectCore(value))
+  }
+}
+
+/// Subject is a value wrapper which can be observed for changes.
+/// Access to value is read-only.
+public class ReadonlySubject<Value> {
+  
+  /// Wrapped value.
   public var value: Value {
+    return core.value
+  }
+  
+  /// Observable that broadcasts value changes.
+  public var observable: Observable<Value> {
+    return core.observable
+  }
+  
+  fileprivate let core: SubjectCore<Value>
+  
+  fileprivate init(core: SubjectCore<Value>) {
+    self.core = core
+  }
+}
+
+// MARK: - Helpers
+
+private class SubjectCore<Value> {
+  
+  var value: Value {
     didSet {
       channel.broadcast(value)
     }
   }
   
-  public var observable: Observable<Value> {
+  var observable: Observable<Value> {
     return channel.observable
   }
   
-  private let channel: Channel<Value> = Channel()
+  let channel: Channel<Value>
   
-  public init(_ value: Value) {
+  init(_ value: Value) {
     self.value = value
-  }
-  
-  public func broadcast() {
-    return channel.broadcast(value)
+    let channel = Channel<Value>()
+    channel.broadcast(value) // set latest value.
+    self.channel = channel
   }
 }
