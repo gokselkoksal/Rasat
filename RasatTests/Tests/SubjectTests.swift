@@ -13,10 +13,10 @@ class SubjectTests: XCTestCase {
   
   func testSubject() {
     let subject = Subject<Bool?>(nil)
-    let disposeBag = DisposeBag()
+    let disposables = DisposeBag()
     var values: [Bool?] = []
     
-    disposeBag += subject.observable.subscribe { (value) in
+    disposables += subject.observable.subscribe { (value) in
       values.append(value)
     }
     
@@ -24,5 +24,36 @@ class SubjectTests: XCTestCase {
     expectedValues.forEach({ subject.value = $0 })
     
     XCTAssertEqual(values, expectedValues)
+  }
+  
+  func testReadonlySubject() {
+    // given:
+    let subject = Subject(1)
+    // when:
+    let readonlySubject: ReadonlySubject<Int> = subject
+    // then:
+    XCTAssertEqual(readonlySubject.value, 1)
+    
+    // given:
+    var output: [Int] = []
+    let disposables = DisposeBag()
+    
+    // when:
+    disposables += readonlySubject.observable.subscribe(policy: .startWithLatestValue) { output.append($0) }
+    // then:
+    XCTAssertEqual(readonlySubject.value, 1)
+    XCTAssertEqual(output, [1])
+    
+    // when:
+    subject.value = 2
+    // then:
+    XCTAssertEqual(readonlySubject.value, 2)
+    XCTAssertEqual(output, [1, 2])
+    
+    // when:
+    subject.value = 3
+    // then:
+    XCTAssertEqual(readonlySubject.value, 3)
+    XCTAssertEqual(output, [1, 2, 3])
   }
 }

@@ -29,7 +29,6 @@
 		621F097921DFF71B009D8CA8 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621F097621DFF71B009D8CA8 /* Channel.swift */; };
 		621F097A21DFF71B009D8CA8 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621F097621DFF71B009D8CA8 /* Channel.swift */; };
 		621F097B21DFF71B009D8CA8 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621F097621DFF71B009D8CA8 /* Channel.swift */; };
-		621F097C21DFF71B009D8CA8 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621F097621DFF71B009D8CA8 /* Channel.swift */; };
 		621F097D21DFF71B009D8CA8 /* DisposeBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621F097721DFF71B009D8CA8 /* DisposeBag.swift */; };
 		621F097E21DFF71B009D8CA8 /* DisposeBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621F097721DFF71B009D8CA8 /* DisposeBag.swift */; };
 		621F097F21DFF71B009D8CA8 /* DisposeBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621F097721DFF71B009D8CA8 /* DisposeBag.swift */; };
@@ -37,19 +36,37 @@
 		621F098121DFF71B009D8CA8 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621F097821DFF71B009D8CA8 /* Subject.swift */; };
 		621F098221DFF71B009D8CA8 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621F097821DFF71B009D8CA8 /* Subject.swift */; };
 		621F098321DFF71B009D8CA8 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621F097821DFF71B009D8CA8 /* Subject.swift */; };
-		621F098421DFF71B009D8CA8 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621F097821DFF71B009D8CA8 /* Subject.swift */; };
 		621F098921DFF7C2009D8CA8 /* SubjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621F098721DFF7C2009D8CA8 /* SubjectTests.swift */; };
 		621F098A21DFF7C2009D8CA8 /* SubjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621F098721DFF7C2009D8CA8 /* SubjectTests.swift */; };
 		621F098B21DFF7C2009D8CA8 /* SubjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621F098721DFF7C2009D8CA8 /* SubjectTests.swift */; };
 		621F098C21DFF7C2009D8CA8 /* ChannelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621F098821DFF7C2009D8CA8 /* ChannelTests.swift */; };
 		621F098D21DFF7C2009D8CA8 /* ChannelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621F098821DFF7C2009D8CA8 /* ChannelTests.swift */; };
 		621F098E21DFF7C2009D8CA8 /* ChannelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621F098821DFF7C2009D8CA8 /* ChannelTests.swift */; };
+		622A5091223D533700A2A559 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622A5090223D533700A2A559 /* Observable.swift */; };
+		622A5092223D533700A2A559 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622A5090223D533700A2A559 /* Observable.swift */; };
+		622A5093223D533700A2A559 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622A5090223D533700A2A559 /* Observable.swift */; };
+		622A5095223D534200A2A559 /* Observable+Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622A5094223D534200A2A559 /* Observable+Operators.swift */; };
+		622A5096223D534200A2A559 /* Observable+Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622A5094223D534200A2A559 /* Observable+Operators.swift */; };
+		622A5097223D534200A2A559 /* Observable+Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622A5094223D534200A2A559 /* Observable+Operators.swift */; };
+		622A5099223D5DE700A2A559 /* ObservableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622A5098223D5DE700A2A559 /* ObservableTests.swift */; };
+		622A509A223D5DE700A2A559 /* ObservableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622A5098223D5DE700A2A559 /* ObservableTests.swift */; };
+		622A509B223D5DE700A2A559 /* ObservableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622A5098223D5DE700A2A559 /* ObservableTests.swift */; };
+		623B38282240321F004F1844 /* ObservableOperatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6285CF0B222C692900D82019 /* ObservableOperatorTests.swift */; };
+		623B382B2240324D004F1844 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621F097621DFF71B009D8CA8 /* Channel.swift */; };
+		623B382C2240324D004F1844 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622A5090223D533700A2A559 /* Observable.swift */; };
+		623B382D2240324D004F1844 /* Observable+Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622A5094223D534200A2A559 /* Observable+Operators.swift */; };
+		623B382E2240324D004F1844 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621F097821DFF71B009D8CA8 /* Subject.swift */; };
 		62486CA721DFF9CB002C26F6 /* Array+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62486CA521DFF9CB002C26F6 /* Array+Helpers.swift */; };
 		62486CA821DFF9CB002C26F6 /* Array+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62486CA521DFF9CB002C26F6 /* Array+Helpers.swift */; };
 		62486CA921DFF9CB002C26F6 /* Array+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62486CA521DFF9CB002C26F6 /* Array+Helpers.swift */; };
 		62486CAA21DFF9CB002C26F6 /* Optional+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62486CA621DFF9CB002C26F6 /* Optional+Helpers.swift */; };
 		62486CAB21DFF9CB002C26F6 /* Optional+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62486CA621DFF9CB002C26F6 /* Optional+Helpers.swift */; };
 		62486CAC21DFF9CB002C26F6 /* Optional+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62486CA621DFF9CB002C26F6 /* Optional+Helpers.swift */; };
+		6285CF0C222C692900D82019 /* ObservableOperatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6285CF0B222C692900D82019 /* ObservableOperatorTests.swift */; };
+		6285CF0F222C69FF00D82019 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6285CF0D222C69BA00D82019 /* Observer.swift */; };
+		6285CF10222C69FF00D82019 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6285CF0D222C69BA00D82019 /* Observer.swift */; };
+		6285CF11222C6A0000D82019 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6285CF0D222C69BA00D82019 /* Observer.swift */; };
+		6285CF12222C6A0300D82019 /* ObservableOperatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6285CF0B222C692900D82019 /* ObservableOperatorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,9 +116,14 @@
 		6227437521E12BDE00699851 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = SOURCE_ROOT; };
 		6227437721E12D8A00699851 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		6227437821E12DB100699851 /* ReleaseProcess.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = ReleaseProcess.md; path = Docs/ReleaseProcess.md; sourceTree = SOURCE_ROOT; };
+		622A5090223D533700A2A559 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		622A5094223D534200A2A559 /* Observable+Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Operators.swift"; sourceTree = "<group>"; };
+		622A5098223D5DE700A2A559 /* ObservableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableTests.swift; sourceTree = "<group>"; };
 		62486CA521DFF9CB002C26F6 /* Array+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Helpers.swift"; sourceTree = "<group>"; };
 		62486CA621DFF9CB002C26F6 /* Optional+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Optional+Helpers.swift"; sourceTree = "<group>"; };
 		62486CB021DFFD5A002C26F6 /* Dependencies.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Dependencies.md; sourceTree = "<group>"; };
+		6285CF0B222C692900D82019 /* ObservableOperatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableOperatorTests.swift; sourceTree = "<group>"; };
+		6285CF0D222C69BA00D82019 /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +258,8 @@
 			children = (
 				621F096121DFF63E009D8CA8 /* Dependencies */,
 				621F097621DFF71B009D8CA8 /* Channel.swift */,
+				622A5090223D533700A2A559 /* Observable.swift */,
+				622A5094223D534200A2A559 /* Observable+Operators.swift */,
 				621F097821DFF71B009D8CA8 /* Subject.swift */,
 				621F097721DFF71B009D8CA8 /* DisposeBag.swift */,
 			);
@@ -266,6 +290,7 @@
 			children = (
 				62486CA521DFF9CB002C26F6 /* Array+Helpers.swift */,
 				62486CA621DFF9CB002C26F6 /* Optional+Helpers.swift */,
+				6285CF0D222C69BA00D82019 /* Observer.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -274,6 +299,8 @@
 			isa = PBXGroup;
 			children = (
 				621F098821DFF7C2009D8CA8 /* ChannelTests.swift */,
+				622A5098223D5DE700A2A559 /* ObservableTests.swift */,
+				6285CF0B222C692900D82019 /* ObservableOperatorTests.swift */,
 				621F098721DFF7C2009D8CA8 /* SubjectTests.swift */,
 			);
 			path = Tests;
@@ -563,6 +590,8 @@
 				621F096D21DFF6AB009D8CA8 /* Atomic.swift in Sources */,
 				621F097921DFF71B009D8CA8 /* Channel.swift in Sources */,
 				621F096921DFF6AB009D8CA8 /* WeakArray.swift in Sources */,
+				622A5091223D533700A2A559 /* Observable.swift in Sources */,
+				622A5095223D534200A2A559 /* Observable+Operators.swift in Sources */,
 				621F097D21DFF71B009D8CA8 /* DisposeBag.swift in Sources */,
 				621F098121DFF71B009D8CA8 /* Subject.swift in Sources */,
 				621F097121DFF6AB009D8CA8 /* Weak.swift in Sources */,
@@ -573,7 +602,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6285CF0C222C692900D82019 /* ObservableOperatorTests.swift in Sources */,
+				622A5099223D5DE700A2A559 /* ObservableTests.swift in Sources */,
 				621F098921DFF7C2009D8CA8 /* SubjectTests.swift in Sources */,
+				6285CF0F222C69FF00D82019 /* Observer.swift in Sources */,
 				62486CAA21DFF9CB002C26F6 /* Optional+Helpers.swift in Sources */,
 				62486CA721DFF9CB002C26F6 /* Array+Helpers.swift in Sources */,
 				621F098C21DFF7C2009D8CA8 /* ChannelTests.swift in Sources */,
@@ -587,6 +619,8 @@
 				621F096E21DFF6AB009D8CA8 /* Atomic.swift in Sources */,
 				621F097A21DFF71B009D8CA8 /* Channel.swift in Sources */,
 				621F096A21DFF6AB009D8CA8 /* WeakArray.swift in Sources */,
+				622A5092223D533700A2A559 /* Observable.swift in Sources */,
+				622A5096223D534200A2A559 /* Observable+Operators.swift in Sources */,
 				621F097E21DFF71B009D8CA8 /* DisposeBag.swift in Sources */,
 				621F098221DFF71B009D8CA8 /* Subject.swift in Sources */,
 				621F097221DFF6AB009D8CA8 /* Weak.swift in Sources */,
@@ -598,9 +632,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				621F098A21DFF7C2009D8CA8 /* SubjectTests.swift in Sources */,
+				622A509A223D5DE700A2A559 /* ObservableTests.swift in Sources */,
+				6285CF10222C69FF00D82019 /* Observer.swift in Sources */,
 				62486CAB21DFF9CB002C26F6 /* Optional+Helpers.swift in Sources */,
 				62486CA821DFF9CB002C26F6 /* Array+Helpers.swift in Sources */,
 				621F098D21DFF7C2009D8CA8 /* ChannelTests.swift in Sources */,
+				6285CF12222C6A0300D82019 /* ObservableOperatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -609,10 +646,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				621F097021DFF6AB009D8CA8 /* Atomic.swift in Sources */,
-				621F097C21DFF71B009D8CA8 /* Channel.swift in Sources */,
+				623B382C2240324D004F1844 /* Observable.swift in Sources */,
+				623B382E2240324D004F1844 /* Subject.swift in Sources */,
+				623B382D2240324D004F1844 /* Observable+Operators.swift in Sources */,
+				623B382B2240324D004F1844 /* Channel.swift in Sources */,
 				621F096C21DFF6AB009D8CA8 /* WeakArray.swift in Sources */,
 				621F098021DFF71B009D8CA8 /* DisposeBag.swift in Sources */,
-				621F098421DFF71B009D8CA8 /* Subject.swift in Sources */,
 				621F097421DFF6AB009D8CA8 /* Weak.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -624,6 +663,8 @@
 				621F096F21DFF6AB009D8CA8 /* Atomic.swift in Sources */,
 				621F097B21DFF71B009D8CA8 /* Channel.swift in Sources */,
 				621F096B21DFF6AB009D8CA8 /* WeakArray.swift in Sources */,
+				622A5093223D533700A2A559 /* Observable.swift in Sources */,
+				622A5097223D534200A2A559 /* Observable+Operators.swift in Sources */,
 				621F097F21DFF71B009D8CA8 /* DisposeBag.swift in Sources */,
 				621F098321DFF71B009D8CA8 /* Subject.swift in Sources */,
 				621F097321DFF6AB009D8CA8 /* Weak.swift in Sources */,
@@ -635,8 +676,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				621F098B21DFF7C2009D8CA8 /* SubjectTests.swift in Sources */,
+				6285CF11222C6A0000D82019 /* Observer.swift in Sources */,
 				62486CAC21DFF9CB002C26F6 /* Optional+Helpers.swift in Sources */,
 				62486CA921DFF9CB002C26F6 /* Array+Helpers.swift in Sources */,
+				623B38282240321F004F1844 /* ObservableOperatorTests.swift in Sources */,
+				622A509B223D5DE700A2A559 /* ObservableTests.swift in Sources */,
 				621F098E21DFF7C2009D8CA8 /* ChannelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

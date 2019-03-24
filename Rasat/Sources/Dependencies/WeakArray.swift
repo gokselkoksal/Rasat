@@ -30,8 +30,15 @@ internal struct WeakArray<Element: AnyObject> {
   }
   
   /// Removes wrappers with nil values from elements.
-  public mutating func compact() {
-    weakElements = weakElements.filter({ $0.value != nil })
+  public mutating func compact(_ isIncluded: ((Element) -> Bool)? = nil) {
+    if let isIncluded = isIncluded {
+      weakElements = weakElements.filter { (weak) -> Bool in
+        guard let value = weak.value else { return false }
+        return isIncluded(value)
+      }
+    } else {
+      weakElements = weakElements.filter({ $0.value != nil })
+    }
   }
   
   /// Reads elements stored in weak array.

@@ -86,12 +86,12 @@ class ThemeManager {
 class FeedViewController: UIViewController {
   
   var themeManager: ThemeManager!
-  private let disposeBag = DisposeBag()
+  private let disposables = DisposeBag()
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    disposeBag += themeManager.observable.subscribe { theme in
+    disposables += themeManager.observable.subscribe { theme in
       self.updateTheme(theme)
     }
 }

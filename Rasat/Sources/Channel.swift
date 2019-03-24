@@ -10,123 +10,31 @@ import Foundation
 
 /// An event bus to broadcast messages to its subscribers.
 /// - seealso: `Observable`
-public class Channel<Value> {
+public final class Channel<Value> {
   
   /// Observable to subscribe for receiving broadcasted values.
-  public let observable: Observable<Value> = Observable()
+  public let observable: Observable<Value>
+  private let broadcaster: Observable<Value>.Broadcaster
   
   /// Creates a channel instance.
-  public init() { }
+  public init() {
+    (self.observable, self.broadcaster) = Observable<Value>.create()
+  }
+  
+  /// Subscribes to given observable and broadcasts observed values.
+  ///
+  /// - Parameter source: Observable to subscribe.
+  /// - Returns: A disposable for the subscription. The subscription lives until it is disposed.
+  public func broadcast(from observable: Observable<Value>) -> SubscriptionProtocol {
+    return observable.subscribe { [weak self] (value) in
+      self?.broadcast(value)
+    }
+  }
   
   /// Broadcasts given value to subscribers.
   ///
-  /// - Parameters:
-  ///   - value: Value to broadcast.
-  ///   - completion: Completion handler called after notifing all subscribers.
+  /// - Parameter value: Value to broadcast.
   public func broadcast(_ value: Value) {
-    observable.send(value)
-  }
-}
-
-/// Observable manages subscriptions and delivers parent Channel's messages.
-public class Observable<Value> {
-  
-  /// Latest observed value.
-  public private(set) var latestValue: Value?
-  
-  private let atomicWeakSubscriptions: Atomic<WeakArray<Subscription>> = Atomic(WeakArray<Subscription>())
-  
-  /// Subscribes given object to observable.
-  ///
-  /// - Parameters:
-  ///   - queue: Queue for given block to be called in. If you pass nil, the block is run synchronously on the posting thread.
-  ///   - id: Identifier for the subscription.
-  ///   - block: Block to call upon broadcast.
-  /// - Returns: A disposable for the subscription. The subscription lives until it is disposed.
-  public func subscribe(
-    on queue: DispatchQueue? = nil,
-    id: String,
-    handler: @escaping (Value) -> Void) -> Disposable
-  {
-    let subscription = Subscription(id: id, queue: queue, handler: handler)
-    atomicWeakSubscriptions.write { (weakSubscriptions) in
-      weakSubscriptions.append(subscription)
-    }
-    return subscription
-  }
-  
-  /// Subscribes given object to observable.
-  ///
-  /// - Parameters:
-  ///   - queue: Queue for given block to be called in. If you pass nil, the block is run synchronously on the posting thread.
-  ///   - file: Caller's file name.
-  ///   - line: Caller's line number.
-  ///   - handler: Block to call upon broadcast.
-  /// - Returns: A disposable for the subscription. The subscription lives until it is disposed.
-  public func subscribe(
-    on queue: DispatchQueue? = nil,
-    file: String = #file,
-    line: UInt = #line,
-    handler: @escaping (Value) -> Void) -> Disposable
-  {
-    let fileId = URL(string: file)?.lastPathComponent ?? file
-    return subscribe(on: queue, id: "\(fileId):\(line)", handler: handler)
-  }
-  
-  /// Returns ids of the current subscriptions. Might be useful for debugging.
-  public func subscriptions() -> [String] {
-    return atomicWeakSubscriptions.value.strongElements().map({ $0.id })
-  }
-  
-  fileprivate func send(_ value: Value) {
-    atomicWeakSubscriptions.syncWrite { (weakSubscriptions) in
-      self.latestValue = value
-      weakSubscriptions.compact()
-      weakSubscriptions.strongElements().forEach({ $0.send(value) })
-    }
-  }
-}
-
-// MARK: - Subscription (Internal)
-
-extension Observable {
-  
-  class Subscription: Disposable {
-    
-    let id: String
-    
-    private let queue: DispatchQueue?
-    private let handler: (Value) -> Void
-    private var isDisposed: Bool = false
-    
-    var isActive: Bool {
-      return isDisposed == false
-    }
-    
-    init(id: String, queue: DispatchQueue?, handler: @escaping (Value) -> Void) {
-      self.id = id
-      self.queue = queue
-      self.handler = handler
-    }
-    
-    func dispose() {
-      isDisposed = true
-    }
-    
-    fileprivate func send(_ value: Value) {
-      if let queue = queue {
-        queue.async { [weak self] in
-          guard let strongSelf = self else { return }
-          
-          if strongSelf.isActive {
-            strongSelf.handler(value)
-          }
-        }
-      } else {
-        if isActive {
-          handler(value)
-        }
-      }
-    }
+    broadcaster.broadcast(value)
   }
 }
