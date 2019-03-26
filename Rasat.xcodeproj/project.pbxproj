@@ -67,6 +67,18 @@
 		6285CF10222C69FF00D82019 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6285CF0D222C69BA00D82019 /* Observer.swift */; };
 		6285CF11222C6A0000D82019 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6285CF0D222C69BA00D82019 /* Observer.swift */; };
 		6285CF12222C6A0300D82019 /* ObservableOperatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6285CF0B222C692900D82019 /* ObservableOperatorTests.swift */; };
+		62CE6BAA224AE391006E0E63 /* ObservableMemoryManagementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CE6BA9224AE391006E0E63 /* ObservableMemoryManagementTests.swift */; };
+		62CE6BAB224AE391006E0E63 /* ObservableMemoryManagementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CE6BA9224AE391006E0E63 /* ObservableMemoryManagementTests.swift */; };
+		62CE6BAC224AE391006E0E63 /* ObservableMemoryManagementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CE6BA9224AE391006E0E63 /* ObservableMemoryManagementTests.swift */; };
+		62CE6BAE224AE586006E0E63 /* Observable+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CE6BAD224AE586006E0E63 /* Observable+Helpers.swift */; };
+		62CE6BAF224AE586006E0E63 /* Observable+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CE6BAD224AE586006E0E63 /* Observable+Helpers.swift */; };
+		62CE6BB0224AE586006E0E63 /* Observable+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CE6BAD224AE586006E0E63 /* Observable+Helpers.swift */; };
+		62CE6BB2224AE894006E0E63 /* DisposeBagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CE6BB1224AE894006E0E63 /* DisposeBagTests.swift */; };
+		62CE6BB3224AE894006E0E63 /* DisposeBagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CE6BB1224AE894006E0E63 /* DisposeBagTests.swift */; };
+		62CE6BB4224AE894006E0E63 /* DisposeBagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CE6BB1224AE894006E0E63 /* DisposeBagTests.swift */; };
+		62CE6BB6224AEC78006E0E63 /* MemoryBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CE6BB5224AEC78006E0E63 /* MemoryBox.swift */; };
+		62CE6BB7224AEC78006E0E63 /* MemoryBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CE6BB5224AEC78006E0E63 /* MemoryBox.swift */; };
+		62CE6BB8224AEC78006E0E63 /* MemoryBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CE6BB5224AEC78006E0E63 /* MemoryBox.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +136,10 @@
 		62486CB021DFFD5A002C26F6 /* Dependencies.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Dependencies.md; sourceTree = "<group>"; };
 		6285CF0B222C692900D82019 /* ObservableOperatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableOperatorTests.swift; sourceTree = "<group>"; };
 		6285CF0D222C69BA00D82019 /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
+		62CE6BA9224AE391006E0E63 /* ObservableMemoryManagementTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableMemoryManagementTests.swift; sourceTree = "<group>"; };
+		62CE6BAD224AE586006E0E63 /* Observable+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Helpers.swift"; sourceTree = "<group>"; };
+		62CE6BB1224AE894006E0E63 /* DisposeBagTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisposeBagTests.swift; sourceTree = "<group>"; };
+		62CE6BB5224AEC78006E0E63 /* MemoryBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryBox.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -291,6 +307,8 @@
 				62486CA521DFF9CB002C26F6 /* Array+Helpers.swift */,
 				62486CA621DFF9CB002C26F6 /* Optional+Helpers.swift */,
 				6285CF0D222C69BA00D82019 /* Observer.swift */,
+				62CE6BAD224AE586006E0E63 /* Observable+Helpers.swift */,
+				62CE6BB5224AEC78006E0E63 /* MemoryBox.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -301,7 +319,9 @@
 				621F098821DFF7C2009D8CA8 /* ChannelTests.swift */,
 				622A5098223D5DE700A2A559 /* ObservableTests.swift */,
 				6285CF0B222C692900D82019 /* ObservableOperatorTests.swift */,
+				62CE6BA9224AE391006E0E63 /* ObservableMemoryManagementTests.swift */,
 				621F098721DFF7C2009D8CA8 /* SubjectTests.swift */,
+				62CE6BB1224AE894006E0E63 /* DisposeBagTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -606,9 +626,13 @@
 				622A5099223D5DE700A2A559 /* ObservableTests.swift in Sources */,
 				621F098921DFF7C2009D8CA8 /* SubjectTests.swift in Sources */,
 				6285CF0F222C69FF00D82019 /* Observer.swift in Sources */,
+				62CE6BB6224AEC78006E0E63 /* MemoryBox.swift in Sources */,
+				62CE6BB2224AE894006E0E63 /* DisposeBagTests.swift in Sources */,
 				62486CAA21DFF9CB002C26F6 /* Optional+Helpers.swift in Sources */,
+				62CE6BAE224AE586006E0E63 /* Observable+Helpers.swift in Sources */,
 				62486CA721DFF9CB002C26F6 /* Array+Helpers.swift in Sources */,
 				621F098C21DFF7C2009D8CA8 /* ChannelTests.swift in Sources */,
+				62CE6BAA224AE391006E0E63 /* ObservableMemoryManagementTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -635,9 +659,13 @@
 				622A509A223D5DE700A2A559 /* ObservableTests.swift in Sources */,
 				6285CF10222C69FF00D82019 /* Observer.swift in Sources */,
 				62486CAB21DFF9CB002C26F6 /* Optional+Helpers.swift in Sources */,
+				62CE6BB7224AEC78006E0E63 /* MemoryBox.swift in Sources */,
+				62CE6BB3224AE894006E0E63 /* DisposeBagTests.swift in Sources */,
 				62486CA821DFF9CB002C26F6 /* Array+Helpers.swift in Sources */,
+				62CE6BAF224AE586006E0E63 /* Observable+Helpers.swift in Sources */,
 				621F098D21DFF7C2009D8CA8 /* ChannelTests.swift in Sources */,
 				6285CF12222C6A0300D82019 /* ObservableOperatorTests.swift in Sources */,
+				62CE6BAB224AE391006E0E63 /* ObservableMemoryManagementTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -679,9 +707,13 @@
 				6285CF11222C6A0000D82019 /* Observer.swift in Sources */,
 				62486CAC21DFF9CB002C26F6 /* Optional+Helpers.swift in Sources */,
 				62486CA921DFF9CB002C26F6 /* Array+Helpers.swift in Sources */,
+				62CE6BB8224AEC78006E0E63 /* MemoryBox.swift in Sources */,
+				62CE6BB4224AE894006E0E63 /* DisposeBagTests.swift in Sources */,
 				623B38282240321F004F1844 /* ObservableOperatorTests.swift in Sources */,
+				62CE6BB0224AE586006E0E63 /* Observable+Helpers.swift in Sources */,
 				622A509B223D5DE700A2A559 /* ObservableTests.swift in Sources */,
 				621F098E21DFF7C2009D8CA8 /* ChannelTests.swift in Sources */,
+				62CE6BAC224AE391006E0E63 /* ObservableMemoryManagementTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

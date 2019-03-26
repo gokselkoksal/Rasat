@@ -122,6 +122,10 @@ class ObservableOperatorTests: XCTestCase {
     
     // when:
     channel1.broadcast(11)
+    // then:
+    XCTAssertEqual(observer.values.count, 0)
+    
+    // when:
     channel2.broadcast(21)
     // then:
     XCTAssertEqual(observer.values.count, 1)
@@ -136,6 +140,17 @@ class ObservableOperatorTests: XCTestCase {
     XCTAssertEqual(try observer.values.element(at: 0).1, 21)
     XCTAssertEqual(try observer.values.element(at: 1).0, 12)
     XCTAssertEqual(try observer.values.element(at: 1).1, 21)
+    
+    // when:
+    channel2.broadcast(22)
+    // then:
+    XCTAssertEqual(observer.values.count, 3)
+    XCTAssertEqual(try observer.values.element(at: 0).0, 11)
+    XCTAssertEqual(try observer.values.element(at: 0).1, 21)
+    XCTAssertEqual(try observer.values.element(at: 1).0, 12)
+    XCTAssertEqual(try observer.values.element(at: 1).1, 21)
+    XCTAssertEqual(try observer.values.element(at: 2).0, 12)
+    XCTAssertEqual(try observer.values.element(at: 2).1, 22)
   }
   
   func testSkipRepeats() {
@@ -191,16 +206,6 @@ class ObservableOperatorTests: XCTestCase {
     // then:
     XCTAssertEqual(channel.observable.latestValue, "banana.jpg")
     XCTAssertEqual(urls.map({ $0.absoluteString }), ["https://example.com/image/car.jpg"])
-  }
-}
-
-private extension Observable {
-  
-  func assertSubscriptionCount(_ count: Int, file: StaticString = #file, line: UInt = #line) {
-    XCTAssertEqual(subscriptions().count, count, file: file, line: line)
-  }
-  
-  func assertSubscription(at index: Int, prefix: String, file: StaticString = #file, line: UInt = #line) throws {
-    XCTAssertTrue(try subscriptions().element(at: index).id.hasPrefix(prefix), file: file, line: line)
+    channel.observable.assertSubscriptionCount(0)
   }
 }
