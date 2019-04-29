@@ -131,6 +131,8 @@
 		622A5090223D533700A2A559 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		622A5094223D534200A2A559 /* Observable+Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Operators.swift"; sourceTree = "<group>"; };
 		622A5098223D5DE700A2A559 /* ObservableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableTests.swift; sourceTree = "<group>"; };
+		6240C9FA22777163004C7844 /* Motivation.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Motivation.md; sourceTree = "<group>"; };
+		6240C9FB22777163004C7844 /* Observer-vs-PubSub.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Observer-vs-PubSub.md"; sourceTree = "<group>"; };
 		62486CA521DFF9CB002C26F6 /* Array+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Helpers.swift"; sourceTree = "<group>"; };
 		62486CA621DFF9CB002C26F6 /* Optional+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Optional+Helpers.swift"; sourceTree = "<group>"; };
 		62486CB021DFFD5A002C26F6 /* Dependencies.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Dependencies.md; sourceTree = "<group>"; };
@@ -297,6 +299,8 @@
 			isa = PBXGroup;
 			children = (
 				6227437821E12DB100699851 /* ReleaseProcess.md */,
+				6240C9FA22777163004C7844 /* Motivation.md */,
+				6240C9FB22777163004C7844 /* Observer-vs-PubSub.md */,
 			);
 			path = Docs;
 			sourceTree = "<group>";

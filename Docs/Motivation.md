@@ -52,25 +52,25 @@ For example:
 let center = NotificationCenter.default
 
 // The object that posts notifications on given center:
-let broadcaster = Broadcaster(notificationCenter: center)
+let themeManager = ThemeManager(notificationCenter: center)
 
 // The object that observes notifications on given center: 
-let observer = Observer(notificationCenter: center)
+let viewController = ViewController(notificationCenter: center)
 ```
 
 At this point, we just _hope_ that the observer doesn't post anything on the given notification center and only observes the notifications posted by the broadcaster.
 
-This could be presented in a safer, more convenient way using `Channel` & `Observable` pair:
+This could be presented in a safer and more convenient way using a `Channel` and `Observable` pair:
 
 ```swift
-let channel = Channel<Message>()
-let broadcaster = Broadcaster(channel: channel)
-let observer = Observer(observable: channel.observable)
+let themeChannel = Channel<Theme>()
+let themeManager = ThemeManager(channel: themeChannel)
+let viewController = ViewController(observable: themeChannel.observable)
 ```
 
-Or, even better, `Broadcaster` can create an internal channel and make **only** its observable public:
+Or, even better, `ThemeManager` can create an private channel and make **only** its observable public:
 
 ```swift
-let broadcaster = Broadcaster()
-let observer = Observer(observable: broadcaster.observable)
+let themeManager = ThemeManager()
+let viewController = ViewController(themeObservable: themeManager.observable)
 ```
