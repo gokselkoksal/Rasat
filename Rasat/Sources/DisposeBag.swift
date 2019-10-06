@@ -60,7 +60,7 @@ public final class DisposeBag: Disposable {
 
 public extension Disposable {
   
-  public func disposed(by bag: DisposeBag) {
+  func disposed(by bag: DisposeBag) {
     bag.add(self)
   }
 }
