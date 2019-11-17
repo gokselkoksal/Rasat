@@ -4,7 +4,7 @@
 [![CocoaPods](https://img.shields.io/cocoapods/v/Rasat.svg?style=flat)](http://cocoapods.org/pods/Rasat)
 [![CI Status](http://img.shields.io/travis/gokselkoksal/Rasat.svg?style=flat)](https://travis-ci.org/gokselkoksal/Rasat)
 [![Platform](https://img.shields.io/cocoapods/p/Rasat.svg?style=flat)](http://cocoadocs.org/docsets/Rasat)
-[![Language](https://img.shields.io/badge/swift-4.2-orange.svg)](http://swift.org)
+[![Language](https://img.shields.io/badge/swift-5.0-orange.svg)](http://swift.org)
 [![License](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://github.com/gokselkoksal/Rasat/blob/master/LICENSE.txt)
 
 A microlibrary for pub-sub/observer pattern implementation in Swift. :eye:
