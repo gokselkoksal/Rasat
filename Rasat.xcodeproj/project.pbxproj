@@ -506,11 +506,11 @@
 				TargetAttributes = {
 					621F08E821DFD1B0009D8CA8 = {
 						CreatedOnToolsVersion = 10.1;
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1150;
 					};
 					621F08F121DFD1B0009D8CA8 = {
 						CreatedOnToolsVersion = 10.1;
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1150;
 					};
 					621F090921DFE286009D8CA8 = {
 						CreatedOnToolsVersion = 10.1;
@@ -537,6 +537,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 621F08DF21DFD1B0009D8CA8;
 			productRefGroup = 621F08EA21DFD1B0009D8CA8 /* Products */;
@@ -890,6 +891,7 @@
 					"@loader_path/Frameworks",
 				);
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -910,6 +912,7 @@
 					"@loader_path/Frameworks",
 				);
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -927,6 +930,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.gk.RasatTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -944,6 +948,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.gk.RasatTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

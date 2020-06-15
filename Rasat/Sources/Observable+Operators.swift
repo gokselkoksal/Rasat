@@ -10,7 +10,7 @@ import Foundation
 
 public extension Observable {
   
-  public func filter(file: String = #file, line: UInt = #line, _ isIncluded: @escaping (Value) -> Bool) -> Observable<Value> {
+  func filter(file: String = #file, line: UInt = #line, _ isIncluded: @escaping (Value) -> Bool) -> Observable<Value> {
     let (observable, broadcaster) = Observable<Value>.create()
     let id = subscriptionId("filter", file, line)
     broadcaster.disposables += subscribe(id: id) { (value) in
@@ -20,7 +20,7 @@ public extension Observable {
     return observable
   }
   
-  public func map<T>(file: String = #file, line: UInt = #line, _ transform: @escaping (Value) -> T) -> Observable<T> {
+  func map<T>(file: String = #file, line: UInt = #line, _ transform: @escaping (Value) -> T) -> Observable<T> {
     let (observable, broadcaster) = Observable<T>.create()
     let id = subscriptionId("map", file, line)
     broadcaster.disposables += subscribe(id: id) { (value) in
@@ -29,7 +29,7 @@ public extension Observable {
     return observable
   }
   
-  public func compactMap<T>(file: String = #file, line: UInt = #line, _ transform: @escaping (Value) -> T?) -> Observable<T> {
+  func compactMap<T>(file: String = #file, line: UInt = #line, _ transform: @escaping (Value) -> T?) -> Observable<T> {
     let (observable, broadcaster) = Observable<T>.create()
     let id = subscriptionId("compactMap", file, line)
     broadcaster.disposables += subscribe(id: id) { (value) in
@@ -39,11 +39,11 @@ public extension Observable {
     return observable
   }
   
-  public static func merge(file: String = #file, line: UInt = #line, _ observables: Observable<Value>...) -> Observable<Value> {
+  static func merge(file: String = #file, line: UInt = #line, _ observables: Observable<Value>...) -> Observable<Value> {
     return merge(observables, file: file, line: line)
   }
   
-  public static func merge(_ observables: [Observable<Value>], file: String = #file, line: UInt = #line) -> Observable<Value> {
+  static func merge(_ observables: [Observable<Value>], file: String = #file, line: UInt = #line) -> Observable<Value> {
     let (observable, broadcaster) = Observable<Value>.create()
     for (index, otherObservable) in observables.enumerated() {
       let id = subscriptionId("merged[\(index)]", file, line)
@@ -54,7 +54,7 @@ public extension Observable {
     return observable
   }
   
-  public static func combineLatest<A, B>(_ a: Observable<A>, _ b: Observable<B>, file: String = #file, line: UInt = #line) -> Observable<(A, B)> where Value == (A, B) {
+  static func combineLatest<A, B>(_ a: Observable<A>, _ b: Observable<B>, file: String = #file, line: UInt = #line) -> Observable<(A, B)> where Value == (A, B) {
     let (observable, broadcaster)  = Observable<(A, B)>.create()
     let id1 = subscriptionId("combined[0]", file, line)
     let id2 = subscriptionId("combined[1]", file, line)
@@ -72,7 +72,7 @@ public extension Observable {
 
 public extension Observable where Value: Equatable {
   
-  public func skipRepeats(file: String = #file, line: UInt = #line) -> Observable<Value> {
+  func skipRepeats(file: String = #file, line: UInt = #line) -> Observable<Value> {
     let (observable, broadcaster) = Observable<Value>.create()
     let id = subscriptionId("skipRepeats", file, line)
     broadcaster.disposables += subscribe(id: id) { [unowned observable] (value) in
@@ -90,7 +90,7 @@ public extension Observable where Value: Equatable {
 
 public extension Observable where Value: OptionalProtocol {
   
-  public func skipNil(file: String = #file, line: UInt = #line) -> Observable<Value.Wrapped> {
+  func skipNil(file: String = #file, line: UInt = #line) -> Observable<Value.Wrapped> {
     let (observable, broadcaster) = Observable<Value.Wrapped>.create()
     let id = subscriptionId("skipNil", file, line)
     broadcaster.disposables += subscribe(id: id) { (value) in

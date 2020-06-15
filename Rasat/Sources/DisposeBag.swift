@@ -61,7 +61,7 @@ public final class DisposeBag: Disposable {
 public extension Disposable {
   
   @available(*, deprecated, message: "Use += operator or add method on DisposeBag instead.")
-  public func disposed(by bag: DisposeBag) {
+  func disposed(by bag: DisposeBag) {
     bag.add(self)
   }
 }

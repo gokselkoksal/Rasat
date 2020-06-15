@@ -118,7 +118,7 @@ public extension Observable {
   /// underlying observable. Use broadcasters to send values to an observable or
   /// to attach a disposable to its lifetime. Attached disposables live along
   /// with the underlying observable.
-  public final class Broadcaster {
+  final class Broadcaster {
     
     private unowned let observable: Observable<Value>
     
