@@ -28,13 +28,18 @@ public final class Observable<Value> {
   
   /// Latest observed value.
   public var latestValue: Value? {
-    return subscriptionManager.latestValue
+    return subscriptionStore.latestValue
   }
   
-  private let disposables = DisposeBag()
-  private let subscriptionManager = SubscriptionManager<Value>()
+  private let subscriptionStore = SubscriptionStore<Value>()
+  public let lifetime = Lifetime()
   
   private init() { }
+  
+  public convenience init(generator: (_ broadcaster: Broadcaster, _ lifetime: Lifetime) -> Void) {
+    self.init()
+    generator(Broadcaster(observable: self), lifetime)
+  }
   
   /// Creates an observable.
   ///
@@ -60,8 +65,8 @@ public final class Observable<Value> {
     id: String,
     handler: @escaping (Value) -> Void) -> SubscriptionProtocol
   {
-    let subscription = Subscription(owner: self, id: id, queue: queue, handler: handler)
-    subscriptionManager.add(subscription)
+    let subscription = Subscription(source: self, id: id, queue: queue, handler: handler)
+    subscriptionStore.add(subscription)
     
     switch policy {
     case .normal:
@@ -69,8 +74,11 @@ public final class Observable<Value> {
     case .startWithValue(let value):
       subscription.send(value)
     case .startWithLatestValue:
-      if let value = latestValue {
+      switch latestValue {
+      case .some(let value):
         subscription.send(value)
+      default:
+        break
       }
     }
     return subscription
@@ -100,11 +108,11 @@ public final class Observable<Value> {
   /// Returns the current subscriptions for debugging.
   /// - warning: ONLY use while debugging.
   public func subscriptions() -> [SubscriptionProtocol] {
-    return subscriptionManager.subscriptions()
+    return subscriptionStore.subscriptions()
   }
   
   fileprivate func broadcast(_ value: Value) {
-    subscriptionManager.broadcast(value)
+    subscriptionStore.broadcast(value)
   }
 }
 
@@ -120,12 +128,7 @@ public extension Observable {
   /// with the underlying observable.
   final class Broadcaster {
     
-    private unowned let observable: Observable<Value>
-    
-    /// Disposables attached to lifetime of the underlying observable.
-    public var disposables: DisposeBag {
-      return observable.disposables
-    }
+    private weak var observable: Observable<Value>?
     
     fileprivate init(observable: Observable<Value>) {
       self.observable = observable
@@ -135,110 +138,22 @@ public extension Observable {
     ///
     /// - Parameter value: Value to send.
     public func broadcast(_ value: Value) {
-      observable.broadcast(value)
-    }
-  }
-}
-
-// MARK: - Subscription
-
-/// Represents a subscription to an observable.
-public protocol SubscriptionProtocol: Disposable {
-  var id: String { get }
-}
-
-fileprivate final class SubscriptionManager<Value> {
-  
-  fileprivate typealias ValueSubscription = Subscription<Value>
-  
-  private(set) var latestValue: Value?
-  private let atomicWeakSubscriptions = Atomic(WeakArray<ValueSubscription>())
-  
-  func add(_ subscription: ValueSubscription) {
-    subscription.onDisposed = { [weak self] in
-      self?.compact()
-    }
-    atomicWeakSubscriptions.asyncWrite({ $0.append(subscription) })
-  }
-  
-  func broadcast(_ value: Value) {
-    atomicWeakSubscriptions.syncRead {
-      latestValue = Optional.some(value)
-      $0.weakElements.forEach({ $0.value?.send(value) })
+      observable?.broadcast(value)
     }
   }
   
-  func compact() {
-    atomicWeakSubscriptions.asyncWrite({ $0.compact({ $0.isActive }) })
-  }
-  
-  func subscriptions() -> [ValueSubscription] {
-    return atomicWeakSubscriptions.value.strongElements()
-  }
-}
-
-fileprivate final class Subscription<Value>: SubscriptionProtocol {
-  
-  let id: String
-  
-  private var owner: Observable<Value>?
-  private let queue: DispatchQueue?
-  private var handler: ((Value) -> Void)?
-  private var isDisposed = Atomic(false)
-  fileprivate var onDisposed: (() -> Void)?
-  
-  var isActive: Bool {
-    return isDisposed.value == false
-  }
-  
-  init(owner: Observable<Value>, id: String, queue: DispatchQueue?, handler: @escaping (Value) -> Void) {
-    self.owner = owner
-    self.id = id
-    self.queue = queue
-    self.handler = handler
-  }
-  
-  deinit {
-    dispose()
-  }
-  
-  func dispose() {
-    guard isDisposed.value == false else { return }
-    isDisposed.syncWrite { value in
-      owner = nil
-      handler = nil
-      value = true
-      onDisposed?()
-    }
-  }
-  
-  fileprivate func send(_ value: Value) {
-    guard isActive else { return }
+  final class Lifetime {
     
-    if let queue = queue {
-      queue.async { [weak self] in
-        self?.handler?(value)
-      }
-    } else {
-      handler?(value)
+    private let disposeBag = DisposeBag()
+    
+    fileprivate init() { }
+    
+    public func add(_ disposable: Disposable) {
+      disposeBag += disposable
+    }
+    
+    public static func +=(lifetime: Lifetime, disposable: Disposable) {
+      lifetime.add(disposable)
     }
   }
-}
-
-// MARK: - Debugging
-
-extension Subscription: CustomStringConvertible, CustomDebugStringConvertible {
-  
-  var description: String {
-    return id
-  }
-  
-  var debugDescription: String {
-    return id
-  }
-}
-
-func sourceLocation(_ file: String, _ line: UInt) -> String {
-  let file = URL(string: file)?.deletingPathExtension().lastPathComponent ?? file
-  return "\(file):\(line)"
 }

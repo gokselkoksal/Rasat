@@ -13,7 +13,7 @@ public extension Observable {
   func filter(file: String = #file, line: UInt = #line, _ isIncluded: @escaping (Value) -> Bool) -> Observable<Value> {
     let (observable, broadcaster) = Observable<Value>.create()
     let id = subscriptionId("filter", file, line)
-    broadcaster.disposables += subscribe(id: id) { (value) in
+    observable.lifetime += subscribe(id: id) { (value) in
       guard isIncluded(value) else { return }
       broadcaster.broadcast(value)
     }
@@ -23,7 +23,7 @@ public extension Observable {
   func map<T>(file: String = #file, line: UInt = #line, _ transform: @escaping (Value) -> T) -> Observable<T> {
     let (observable, broadcaster) = Observable<T>.create()
     let id = subscriptionId("map", file, line)
-    broadcaster.disposables += subscribe(id: id) { (value) in
+    observable.lifetime += subscribe(id: id) { (value) in
       broadcaster.broadcast(transform(value))
     }
     return observable
@@ -32,7 +32,7 @@ public extension Observable {
   func compactMap<T>(file: String = #file, line: UInt = #line, _ transform: @escaping (Value) -> T?) -> Observable<T> {
     let (observable, broadcaster) = Observable<T>.create()
     let id = subscriptionId("compactMap", file, line)
-    broadcaster.disposables += subscribe(id: id) { (value) in
+    observable.lifetime += subscribe(id: id) { (value) in
       guard let mapped = transform(value) else { return }
       broadcaster.broadcast(mapped)
     }
@@ -47,7 +47,7 @@ public extension Observable {
     let (observable, broadcaster) = Observable<Value>.create()
     for (index, otherObservable) in observables.enumerated() {
       let id = subscriptionId("merged[\(index)]", file, line)
-      broadcaster.disposables += otherObservable.subscribe(id: id) { (value) in
+      observable.lifetime += otherObservable.subscribe(id: id) { (value) in
         broadcaster.broadcast(value)
       }
     }
@@ -58,11 +58,11 @@ public extension Observable {
     let (observable, broadcaster)  = Observable<(A, B)>.create()
     let id1 = subscriptionId("combined[0]", file, line)
     let id2 = subscriptionId("combined[1]", file, line)
-    broadcaster.disposables += a.subscribe(id: id1) { [unowned b] (valueA) in
+    observable.lifetime += a.subscribe(id: id1) { [unowned b] (valueA) in
       guard let valueB = b.latestValue else { return }
       broadcaster.broadcast((valueA, valueB))
     }
-    broadcaster.disposables += b.subscribe(id: id2) { [unowned a] (valueB) in
+    observable.lifetime += b.subscribe(id: id2) { [unowned a] (valueB) in
       guard let valueA = a.latestValue else { return }
       broadcaster.broadcast((valueA, valueB))
     }
@@ -75,7 +75,7 @@ public extension Observable where Value: Equatable {
   func skipRepeats(file: String = #file, line: UInt = #line) -> Observable<Value> {
     let (observable, broadcaster) = Observable<Value>.create()
     let id = subscriptionId("skipRepeats", file, line)
-    broadcaster.disposables += subscribe(id: id) { [unowned observable] (value) in
+    observable.lifetime += subscribe(id: id) { [unowned observable] (value) in
       if let latest = observable.latestValue {
         if latest != value {
           broadcaster.broadcast(value)
@@ -93,7 +93,7 @@ public extension Observable where Value: OptionalProtocol {
   func skipNil(file: String = #file, line: UInt = #line) -> Observable<Value.Wrapped> {
     let (observable, broadcaster) = Observable<Value.Wrapped>.create()
     let id = subscriptionId("skipNil", file, line)
-    broadcaster.disposables += subscribe(id: id) { (value) in
+    observable.lifetime += subscribe(id: id) { (value) in
       if let value = value.value {
         broadcaster.broadcast(value)
       }

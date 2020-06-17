@@ -28,7 +28,7 @@ class ObservableTests: XCTestCase {
     // given:
     let channel = Channel<Int>()
     let (observable, broadcaster) = Observable<Int>.create()
-    broadcaster.disposables += channel.observable.subscribe { (value) in
+    observable.lifetime += channel.observable.subscribe { (value) in
       broadcaster.broadcast(value)
     }
     let observer = Observer(observable: observable)
